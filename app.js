@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();
+const PORT = process.env.PORT || 3030;
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -85,6 +86,6 @@ app.post("/delete",(req,res)=>{
     });
 });
 
-app.listen(3000, function () {
+app.listen(PORT, function () {
     console.log("server started on port 3000");
 });
